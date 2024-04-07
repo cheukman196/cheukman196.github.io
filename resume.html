@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Resume</title>
+    <meta name="description" content="This is the Resume Page for Assignment 2">
+    <meta name="keywords" content="Assignment 2, HTML, CSS, Resume, Website">
+    <meta name="author" content="Cheuk Man Sit">
+    <link href="favicon.ico" rel="shortcut icon">
+
+    <!--Stylesheets and Fonts-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!--Home Page header-->
+<header class="headerMain">
+    <h1>#Resume</h1>
+    <div class="resumeQuickBar">
+        <a class="resumeQuickBarButton" href="#resumeAnchorEducation">Education</a>
+        <a class="resumeQuickBarButton" href="#resumeAnchorWorkExp">Work Exp</a>
+    </div>
+</header>
+
+<nav class="navbar">
+    <ul class="navbarList">
+        <li class="navIcon" id="menuName">
+            <div class="navTop">
+                <img src="images/navbar_menu.png" alt="navbar Menu icon" id="iconMenu">
+                <span class="navLinkText">OpenPort</span>
+            </div>
+        </li>
+        <li class="navIcon">
+            <a href="index.html" target="_self" class="navLink">
+                <img src="images/navbar_home.png" alt="navbar home icon" id="iconHome">
+                <span class="navLinkText">Home</span>
+            </a>
+        </li>
+        <li class="navIcon">
+            <a href="resume.html" target="_self" class="navLink">
+                <img src="images/navbar_resume.png" alt="navbar resume icon" id="iconResume">
+                <span class="navLinkText">Resume</span>
+            </a>
+        </li>
+        <li class="navIcon">
+            <a href="contacts.html" target="_self" class="navLink">
+                <img src="images/navbar_contacts.png" alt="navbar contacts icon" id="iconContacts">
+                <span class="navLinkText">Contacts</span>
+            </a>
+        </li>
+        <li class="navIcon">
+            <a href="https://github.com/cheukman196" class="navLink">
+                <img src="images/navbar_github.png" alt="navbar github icon" id="iconGithub">
+                <span class="navLinkText">Github</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+<main class="resumePageBG" id="resumeAnchorIntro">
+
+    <div class="resumeEducationSection">
+        <h2 id="resumeAnchorEducation">Education</h2>
+        <section class="resumeEducationWrapper">
+            <h5 class="topicFontResume">Computer Programming and Analysis</h5>
+            <p class="contentFont2"><span class="justify">Institution:</span> George Brown College</p>
+            <p class="contentFont2"><span class="justify">Certificate:</span> Advanced Diploma</p>
+            <p class="contentFont2"><span class="justify">Duration:</span> Sep 2022 - Current</p>
+            <a class="gbcWebsiteButton"
+               href="https://www.georgebrown.ca/programs/computer-programming-and-analysis-program-t177#how-to-apply"
+               target="_blank">
+                <div>Link</div>
+            </a>
+        </section>
+
+
+        <section class="resumeEducationWrapper">
+            <h5 class="topicFontResume">Bachelor of Arts (English)</h5>
+            <p class="contentFont2"><span class="justify">Institution:</span> CUHK</p>
+            <p class="contentFont2"><span class="justify">Certificate:</span> University Degree</p>
+            <p class="contentFont2"><span class="justify">Duration:</span> Sep 2014 - Nov 2018</p>
+            <a class="gbcWebsiteButton"
+               href="https://www.eng.cuhk.edu.hk/" target="_blank">
+                <div>Link</div>
+            </a>
+        </section>
+    </div>
+
+    <div class="resumeWorkSection">
+        <h2 id="resumeAnchorWorkExp">Work Experience</h2>
+
+        <section class="resumeWorkExpWrapper">
+
+            <div class="resumeWorkFlexL">
+                <h5>Editor</h5>
+            </div>
+
+            <div class="resumeWorkFlexR">
+                <p class="contentFont2"><span class="justify">Company:</span> JumpStart Publishers</p>
+                <p class="contentFont2"><span class="justify">Duration:</span> 2019 - 2022</p>
+                <p class="contentFont2"><span class="justify">Skills:</span> Multimedia editing</p>
+                <p class="contentFont2"><span class="justify"></span> Page design</p>
+                <p class="contentFont2"><span class="justify"></span> Project coordination</p>
+                <p class="contentFont2"><span class="justify"></span> High English proficiency</p>
+                <br><br>
+                <p class="contentFont2"><span class="justify">Accomplishments</span></p>
+                <ul class="contentFont2">
+                    <li>Coordinating and editing diversified publications</li>
+                    <li>Setting the framework and organisation for online learning platform</li>
+                    <li>Designed and drafted sales and promotional materials and videos</li>
+
+                </ul>
+            </div>
+
+        </section>
+
+
+        <section class="resumeWorkExpWrapper">
+
+            <div class="resumeWorkFlexL">
+                <h5>Research Assistant</h5>
+            </div>
+
+            <div class="resumeWorkFlexR">
+                <p class="contentFont2"><span class="justify">Company:</span> Education First</p>
+                <p class="contentFont2"><span class="justify">Duration:</span> 2016 - 2017</p>
+                <p class="contentFont2"><span class="justify">Skills:</span> Data trend analysis</p>
+                <p class="contentFont2"><span class="justify"></span> Infographics design</p>
+                <p class="contentFont2"><span class="justify"></span> Preparing media-packages</p>
+                <br><br>
+                <p class="contentFont2"><span class="justify">Accomplishments</span></p>
+                <ul class="contentFont2">
+                    <li>EF Global English Proficiency Index publication</li>
+                    <li>Preparing materials for multiple public conferences</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
+</html>

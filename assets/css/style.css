@@ -1,0 +1,912 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka+One&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Fonts */
+.topicFont {
+    color: whitesmoke;
+    font-size: 3rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    font-family: "Proxima Nova";
+    box-sizing: border-box;
+    width: 80%;
+    transition: 200ms ease;
+}
+
+li .topicFont {
+    font-size: 4rem;
+}
+
+li .topicFont::first-letter {
+    font-size: 4.5rem;
+}
+
+.topicFont2 {
+    font-size: 1.25rem;
+    font-family: "Roboto";
+    color: lightgrey;
+    margin: 2.5rem 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: fit-content;
+    background: var(--nav-bg-color-select);
+    transition: 200ms ease;
+}
+
+.topicFont3 {
+    font-size: 2rem;
+    font-family: "Roboto";
+    color: whitesmoke;
+    width: 20vw;
+    margin-top: -5.5rem;
+    opacity: 0;
+    transition: 200ms ease;
+    text-align: justify-all;
+}
+
+
+.contentFont1 {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+/* Root values and var */
+:root {
+    --main-color: hsla(155, 70%, 50%, 1);
+    --main-color-dark: hsl(123, 18%, 59%, 1);
+    --main-bg-color: hsl(124, 100%, 97%);
+    --main-bg-color-light: hsla(0, 0%, 30%, 0.80);
+    --main-contrast-light: hsl(1, 68%, 84%);
+    --main-contrast-dark: hsla(2, 49%, 69%, 0.93);
+    --nav-bg-color: hsla(0, 0%, 50%, 1);
+    --nav-bg-color-select: hsla(0, 0%, 30%, 1);
+    --content-bg-grey: hsla(0, 0%, 20%, 1);
+    font-family: "Roboto";
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+
+/* Structure values */
+html {
+    scroll-behavior: smooth;
+    background: var(--nav-bg-color-select);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.headerMain {
+    background: var(--content-bg-grey);
+    top: 0;
+    left: 0;
+    width: auto;
+    margin: 0;
+    padding: 1.02rem;
+    z-index: 5;
+    box-sizing: border-box;
+    position: sticky;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+main {
+    padding-top: 5rem;
+}
+
+.wrapper {
+    background-image: url(../../images/bg_hk.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: hsla(155, 20%, 20%, 1);
+    background-blend-mode: multiply;
+    background-position: top;
+    width: auto;
+    height: 100vh;
+    padding: 6rem;
+    margin-top: -7rem;
+}
+
+.homeWelcome {
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.homeArticleFlex {
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: auto;
+}
+
+.homeSiteDescr {
+    margin: 1rem 2rem;
+    padding: 2rem;
+    transition: 200ms ease;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    width: 700px;
+    z-index: 1;
+
+}
+
+.homeOwnDescr {
+    margin: 2rem;
+    padding: 2rem;
+    transition: 200ms ease;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    width: 700px;
+    z-index: 1;
+}
+
+.homeArticleFlexBGL {
+    width: 50px;
+    height: 500px;
+    left: 0%;
+    position: absolute;
+    z-index: 0;
+    transition: 300ms ease;
+}
+
+.homeArticleFlexBGR {
+    width: 50px;
+    height: 500px;
+    right: 0%;
+    position: absolute;
+    z-index: 0;
+    transition: 300ms ease;
+}
+
+.homeArticleFlex:hover .homeArticleFlexBGL, .homeArticleFlex:hover .homeArticleFlexBGR {
+    background: var(--content-bg-grey);
+    border: whitesmoke solid;
+    border-width: 0 0.3rem 0 0.3rem;
+    transition: 300ms ease;
+    width: 100%;
+}
+
+.homeArticleFlex:hover {
+    /*background: var(--content-bg-grey);
+    box-shadow: whitesmoke 0.3rem 0.3rem;
+    transition: 300ms ease;*/
+}
+
+.homeSiteDescr > .topicFont, .homeOwnDescr > .topicFont {
+    color: var(--main-color);
+}
+
+/* Nav Bar modifications */
+body::-webkit-scrollbar, .navbar::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.navbar::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar-track, .navbar::-webkit-scrollbar-track {
+    background: hsla(0, 0%, 50%, 1);
+
+}
+
+body::-webkit-scrollbar-thumb {
+    background: lightgrey;
+    border-radius: 5px;
+}
+
+.navbar::-webkit-scrollbar-thumb {
+    background: var(--nav-bg-color-select);
+}
+
+.navbar {
+    height: 4.45rem;
+    width: 5rem;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    position: fixed;
+    background-color: var(--nav-bg-color);
+    transition: 200ms ease;
+    overflow-x: hidden;
+    opacity: 0.99;
+}
+
+.navbar:hover {
+    width: 12rem;
+    height: 100vh;
+    left: 0;
+    border-radius: 0;
+    transition: 200ms ease;
+}
+
+.navbar:hover .navTop img {
+    rotate: 180deg;
+    transition: 200ms ease;
+}
+
+.navbar:hover .navLinkText {
+    display: block;
+    transition: 200ms ease;
+}
+
+.navbar:hover #menuName .navLinkText {
+    display: block;
+    transition: 200ms ease;
+    filter: grayscale(0%);
+}
+
+.navbar:hover #menuName img {
+    transition: 500ms ease;
+    filter: grayscale(0%);
+}
+
+.navbar:hover .navTop {
+    background-color: var(--content-bg-grey);
+    opacity: 1;
+    transition: 150ms ease-out;
+}
+
+.navbarList {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navIcon {
+    width: 100%;
+    align-items: center;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 3.5rem;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+}
+
+.navTop {
+    display: flex;
+    align-items: center;
+    height: 4.5rem;
+    text-decoration: none;
+    background: var(--nav-bg-color);
+    opacity: 0.9;
+}
+
+.navTop img {
+    margin: 1.2rem;
+    padding: 0.5rem;
+    width: 1.5rem;
+    rotate: -90deg;
+    transition: 500ms ease;
+    filter: brightness(0) invert(1);
+}
+
+.navLink:hover {
+    filter: grayscale(0%) opacity(1);
+    background-color: var(--nav-bg-color-select);
+    transition: 200ms ease;
+}
+
+.navLink:active {
+    filter: grayscale(0%) opacity(1);
+    background-color: hsla(155, 50%, 30%);
+    transition: 100ms ease;
+}
+
+.navLink:hover img {
+    filter: grayscale(0%) opacity(1);
+    margin-left: 1.8rem;
+    transition: 200ms ease;
+}
+
+.navLinkText {
+    margin: 0.2rem;
+    display: none;
+    transition: 200ms ease;
+    color: whitesmoke;
+    font-family: "Roboto";
+}
+
+
+.navLink img {
+    margin: 1.2rem;
+    padding: 0.5rem;
+    width: 1.5rem;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 200ms ease;
+}
+
+#menuName {
+    background: hsla(0, 0%, 20%, 1);
+
+}
+
+#menuName .navLinkText {
+    font-family: "Roboto";
+    font-size: 1.2rem;
+    margin-left: -0.8rem;
+    display: none;
+    background: -webkit-linear-gradient(left, hsla(155, 100%, 50%, 1), hsla(155, 30%, 50%, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ---Home Page--- */
+
+.homePageBG {
+    background: var(--nav-bg-color-select);
+}
+
+h1 {
+    color: whitesmoke;
+    font-family: "Roboto";
+    text-align: center;
+}
+
+.homeWelcome .topicFont {
+    width: fit-content;
+    margin: 2rem 0;
+    border-radius: 0 1rem 1rem 0;
+    box-sizing: border-box;
+    color: var(--main-color);
+
+}
+
+
+.topicBox {
+    width: 70vw;
+    height: 20rem;
+    list-style: none;
+    transition: 500ms ease;
+    margin-top: -4rem;
+}
+
+.explanationBox {
+    display: inline;
+    width: fit-content;
+}
+
+.welcomeBox {
+    width: fit-content;
+}
+
+.welcomeBox:hover .topicFont2 {
+    transform: translateX(10rem);
+    background: var(--main-color);
+    color: whitesmoke;
+    transition: 200ms ease;
+    transition-property: transform, opacity, background-color, color;
+    border-radius: 1rem;
+}
+
+.welcomeBox:hover .topicFont3 {
+    display: block;
+    transition: 200ms ease;
+    opacity: 1;
+}
+
+.welcomeBox:hover .explanationBox {
+    display: block;
+}
+
+.welcomeBox a {
+    text-decoration: none;
+}
+
+
+.floatNumbers01 {
+    order: 2;
+    font-family: "Proxima Nova";
+    font-size: 8rem;
+    color: var(--main-bg-color);
+    opacity: 0.9;
+}
+
+.floatNumbers02 {
+    font-family: "Proxima Nova";
+    font-size: 8rem;
+    color: var(--main-bg-color);
+    justify-self: flex-start;
+    opacity: 0.9;
+}
+
+.floatNumbers03 {
+    order: 3;
+    font-family: "Proxima Nova";
+    font-size: 8rem;
+    color: var(--main-bg-color);
+    opacity: 0.9;
+
+}
+
+/* ---Resume Page--- */
+.resumePageBG {
+    background: var(--nav-bg-color-select);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.resumeIntroBG {
+    background-image: url(../../images/resume_introbg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin-top: -5rem;
+
+}
+
+.resumeIntroWrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 10rem;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: brightness(70%) blur(5px);
+}
+
+
+.resumeIntroTextWrapper {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+
+}
+
+.whiteH2Font {
+    font-size: 5rem;
+    font-family: "Roboto", cursive;
+    font-weight: lighter;
+    display: inline;
+}
+
+.resumeIntroWrapper .whiteH2Font {
+    font-size: 3rem;
+}
+
+.greenH2Font {
+    color: var(--main-color);
+    font-size: 7rem;
+    font-family: "Roboto", cursive;
+    font-weight: lighter;
+    display: inline;
+}
+
+#resumePicCM {
+    width: 20rem;
+}
+
+.resumeEducationSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.resumeEducationSection h2, .resumeWorkSection h2 {
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 4rem;
+    padding: 5rem;
+}
+
+.classCardHeader {
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 3rem;
+    padding: 3rem 0;
+    color: var(--main-color)
+}
+
+.resumeEducationWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 2rem auto 0;
+    padding: 3rem;
+    border-left: 10px solid var(--content-bg-grey);
+    background-color: var(--main-bg-color-light);
+}
+
+.topicFontResume {
+    font-family: "Roboto";
+    /*font-weight: lighter;*/
+    font-size: 2rem;
+    color: var(--main-bg-color);
+    margin: 2rem 0;
+}
+
+.contentFont2 {
+    font-family: "Roboto";
+    font-size: 1.2rem;
+    margin: 0.2rem 0;
+}
+
+.gbcWebsiteButton {
+    margin: 1rem 0;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 1rem;
+    background: var(--main-color);
+    color: whitesmoke;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.gbcWebsiteButton:hover {
+    background: var(--main-color-dark);
+    transition: 200ms ease;
+}
+
+.classCardGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    overflow-x: scroll;
+    background: var(--nav-bg-color-select);
+    transform: translateY(-3rem);
+    padding: 3rem;
+}
+
+
+.classCardGroup::-webkit-scrollbar {
+    height: 10px;
+}
+
+.classCardGroup::-webkit-scrollbar-thumb {
+    background-color: var(--nav-bg-color);
+    border-radius: 5px;
+    opacity: 0.5;
+}
+
+.classCardGroup::-webkit-scrollbar-track {
+    background-color: #4E4E4E;
+
+}
+
+.classCard {
+    margin-left: 1rem;
+    margin-right: 2rem;
+    padding: 1.5rem;
+    background: var(--content-bg-grey);
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    width: 250px;
+    height: 300px;
+    border-radius: 5%;
+    box-shadow: -1rem 0 3rem black;
+    scroll-margin-top: 200px;
+    transition: 200ms ease;
+    text-align: left;
+}
+
+.classCard:not(:first-child) {
+    margin-left: -5rem;
+}
+
+
+.classCard:hover {
+    transform: translateY(-1.1rem);
+    transition: 200ms ease;
+}
+
+.classCard:hover ~ .classCard {
+    transform: translateX(6rem);
+    transition: 200ms ease;
+}
+
+.classNameFont {
+    color: var(--main-bg-color);
+}
+
+.classCard:hover .classNameFont {
+    background: -webkit-linear-gradient(left, hsla(155, 100%, 50%, 1), hsla(155, 30%, 50%, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 200ms ease;
+}
+
+.classCardTop {
+    display: flex;
+    align-items: center;
+}
+
+.classCardIcon {
+    width: 2rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    transform: translateY(0.2rem);
+}
+
+.classCodeFont {
+    font-family: "Proxima Nova";
+    color: var(--nav-bg-color)
+}
+
+.classDescrFont {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    padding: 0 0.5rem 0 0;
+}
+
+.resumeWorkSection {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 3rem;
+}
+
+.resumeWorkExpWrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 2rem auto;
+    width: 80%;
+    gap: 3rem;
+}
+
+.resumeWorkFlexL {
+    font-family: "Roboto", cursive;
+    font-weight: lighter;
+    font-size: 3rem;
+    color: var(--main-bg-color);
+    width: 40%;
+    border-right: 10px solid var(--content-bg-grey);
+}
+
+.resumeWorkFlexR {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.resumeWorkFlexR li {
+    margin: 0.2rem 0 0 2.5rem;
+}
+
+.justify {
+    text-align: justify;
+    display: inline-block;
+    width: 5rem;
+    padding-right: 1rem;
+    color: #c5c5c5;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.resumeQuickBar {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    font-family: "Roboto";
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    right: 4rem;
+    top: 1.5rem;
+    height: 2.2rem;
+    box-sizing: border-box;
+}
+
+.resumeQuickBarButton {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.resumeQuickBarButton:hover {
+    color: var(--main-color);
+    transform: translateY(-0.2rem);
+    transition: 200ms ease;
+}
+
+/* ---Contacts page---*/
+
+.contactsPage {
+    background: var(--main-bg-color);
+    width: 100%;
+    height: 100%;
+}
+
+.contactFormWrapper {
+    margin-top: -5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    min-height: 35rem;
+    box-sizing: content-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-image: url(../../images/contact_contactbg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100vw;
+}
+
+.contactFormWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.contactForm {
+    padding: 3rem;
+    width: 50%;
+    background-color: var(--nav-bg-color-select);
+    text-transform: capitalize;
+}
+
+
+.contactFormPic {
+    background-image: url(../../images/contact_contacticon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80vw;
+    min-width: 30rem;
+}
+
+textarea {
+    width: 30rem;
+    height: 20rem;
+    border-radius: 5px;
+}
+
+
+input[type=text] {
+    border-radius: 5px;
+    width: 26rem;
+}
+
+
+input, label {
+    display: block;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-family: "Roboto";
+    font-size: 1.2rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    border: none;
+    height: 1.5rem;
+    font-family: "Calibri";
+    padding: 0.2rem 0.5rem;
+
+}
+
+.submitButton {
+    border: none;
+    border-radius: 1rem;
+    width: 20.5rem;
+    height: 2rem;
+    background: var(--main-color);
+    color: whitesmoke;
+    font-family: "Roboto";
+    font-size: 18px;
+}
+
+.submitButton:hover {
+    border: whitesmoke;
+    border-style: dotted;
+    border-radius: 1rem;
+    transition: 200ms ease;
+    background: var(--main-color-dark);
+}
+
+.submitButton:active {
+    color: var(--nav-bg-color-select);
+    border: none;
+}
+
+.contactMethodsWrapper {
+    padding: 5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+
+#contactIconEmail, #contactIconGMap {
+    width: 25vw;
+    max-width: 25rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    background: hsla(0, 0%, 50%, 0.8);
+    border-radius: 3rem;
+    box-sizing: border-box;
+    opacity: 0.95;
+    transition: 350ms ease;
+    z-index: 2;
+    clear: both;
+}
+
+#contactIconEmail:hover {
+    background: var(--content-bg-grey);
+    opacity: 1;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    transition: 200ms ease;
+}
+
+#contactIconGMap:hover {
+    background: var(--content-bg-grey);
+    opacity: 1;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    transition: 200ms ease;
+}
+
+.googleMapsWrapper {
+    display: none;
+    border-radius: 1rem;
+    margin-top: 4rem;
+    padding: 1.5rem;
+    background: var(--nav-bg-color-select);
+}
+
+.googleMaps {
+    width: 100%;
+    padding: -1rem;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+#toggleMap:checked ~ .googleMapsWrapper {
+    display: block;
+    width: 80%;
+    transition: 300ms;
+    z-index: 1;
+}
+
+/* Verification Script */
+.verifyScript {
+    margin: 0 auto;
+    clear: both;
+}
+
